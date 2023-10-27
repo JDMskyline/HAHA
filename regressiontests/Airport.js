@@ -940,7 +940,7 @@ describe("TRB | Airport Tax Category - Test Started", function () {
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))
       .click();
     //your test file is located in the 'helpers' directory
-      const filePath = path.join('./helpers', 'testfile.pdf');
+      const filePath = path.join('./helpers', '//testfile.pdf');
 
     //fileuploading
     await driver

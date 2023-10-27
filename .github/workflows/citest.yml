@@ -28,5 +28,4 @@ jobs:
         run: npm install mochawesome
 
       - name: Run Tests
-        run: npx mocha --no-timeouts 'your-test-script.js'
-      run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command
+        run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

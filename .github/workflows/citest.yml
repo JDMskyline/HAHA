@@ -36,5 +36,8 @@ jobs:
       - name: why
         run: cd regressiontests
 
+      - name: check reg folder
+        run: ls
+
       - name: Run Tests
-        run:  npx mocha --no-timeouts parkingTax.js  # Modify this to match your test script command
+        run:  npx mocha --no-timeouts ParkingTax.js  # Modify this to match your test script command

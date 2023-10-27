@@ -23,7 +23,12 @@ jobs:
         run: ls
 
       - name: Change to the HAH directory
-        run: cd HAH
+        run: cd ../HAH
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16         
 
       - name: checking file again
         run: ls

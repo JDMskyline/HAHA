@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: why
-        run: cd regressiontests
+        run: cd HAHA
     
       - name: Install Dependencies
         run: npm install
@@ -32,8 +32,6 @@ jobs:
 
       - name: Install Mochawesome
         run: npm install mochawesome
-
-
 
       - name: where am I
         run: pwd        

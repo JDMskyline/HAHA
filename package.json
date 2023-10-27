@@ -4,6 +4,6 @@
     "selenium-webdriver": "^4.14.0"
   },
   "scripts": {
-    "test": "npx mocha --no-timeouts regressiontests/parkingTax.js"
+    "test": "npx mocha $(find . -type f -name 'parkingTax.js' | head -n 1)"
   }
 }

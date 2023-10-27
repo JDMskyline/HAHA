@@ -1,4 +1,5 @@
-const config = require('../helpers/config');
+const config = require("./helpers/config");
+const path = require('path');
 const { assert } = require("assert").strict;
 const { fstat } = require("fs");
 const { Builder, By, Key, until, WebElement } = require("selenium-webdriver");
@@ -932,13 +933,16 @@ describe("TRB | Nunc Pro Tunc Test Started", function () {
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))
       .click();
 
+    //your test file is located in the 'helpers' directory
+    const filePath = path.join(__dirname, 'helpers', 'Testfile.pdf');
+
     //fileuploading
     await driver
       .findElement(By.xpath("//input[@name='inputPaperPetitionFile']"))
-      .sendKeys(__dirname + "//testfile.pdf");
+      .sendKeys(filePath);
     await driver
       .findElement(By.xpath("//input[@name='inputBillFile']"))
-      .sendKeys(__dirname + "//testfile.pdf");
+      .sendKeys(filePath);
 
     await driver
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))

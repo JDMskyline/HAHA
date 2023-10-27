@@ -1,4 +1,4 @@
-const config = require("../helpers/config");
+const config = require("./helpers/config");
 const path = require('path');
 const { assert } = require("assert").strict;
 const { fstat } = require("fs");
@@ -1043,12 +1043,12 @@ describe("TRB | Airport Tax Category - Test Started", function () {
         )
       )
       .sendKeys(docketNumber, Key.ENTER);
-    await driver.manage().setTimeouts({ implicit: 10000 });
+
     await driver.sleep(5000);
+    await driver.manage().setTimeouts({ implicit: 10000 });
     await driver
       .findElement(By.xpath("//a[normalize-space()='Schedule']"))
       .click();
-
     await driver.manage().setTimeouts({ implicit: 10000 });
     await driver
       .findElement(

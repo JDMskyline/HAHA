@@ -1,4 +1,5 @@
-const config = require("../helpers/config");
+const config = require("./helpers/config");
+const path = require('path');
 const { assert } = require("assert").strict;
 const { fstat } = require("fs");
 const { Builder, By, Key, until, WebElement } = require("selenium-webdriver");
@@ -947,13 +948,16 @@ describe("TRB | Real Estate Tax Category - Test Started", function () {
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))
       .click();
 
+    //your test file is located in the 'helpers' directory
+    const filePath = path.join(__dirname, 'helpers', 'Testfile.pdf');
+
     //fileuploading
     await driver
       .findElement(By.xpath("//input[@name='inputPaperPetitionFile']"))
-      .sendKeys(__dirname + "//testfile.pdf");
+      .sendKeys(filePath);
     await driver
       .findElement(By.xpath("//input[@name='inputBillFile']"))
-      .sendKeys(__dirname + "//testfile.pdf");
+      .sendKeys(filePath);
 
     await driver
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))
@@ -1046,8 +1050,8 @@ describe("TRB | Real Estate Tax Category - Test Started", function () {
         )
       )
       .sendKeys(docketNumber, Key.ENTER);
+      await driver.sleep(5000);
     await driver.manage().setTimeouts({ implicit: 10000 });
-    await driver.sleep(5000);
     await driver
       .findElement(By.xpath("//a[normalize-space()='Schedule']"))
       .click();

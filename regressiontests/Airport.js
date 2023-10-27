@@ -938,11 +938,13 @@ describe("TRB | Airport Tax Category - Test Started", function () {
     await driver
       .findElement(By.xpath("//button[normalize-space()='SAVE AND CONTINUE']"))
       .click();
+    //your test file is located in the 'helpers' directory
+      const filePath = path.join(__dirname, 'helpers', 'testfile.pdf');
 
     //fileuploading
     await driver
       .findElement(By.xpath("//input[@name='inputPaperPetitionFile']"))
-      .sendKeys(__dirname + "//testfile.pdf");
+      .sendKeys(filePath);
     await driver
       .findElement(By.xpath("//input[@name='inputBillFile']"))
       .sendKeys(__dirname + "//testfile.pdf");

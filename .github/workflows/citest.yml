@@ -27,6 +27,9 @@ jobs:
         with:
           node-version: 16  # Replace with your Node.js version
 
+      - name: checking file again
+        run: ls
+
       - name: Change to the regressiontests directory
         run: cd regressiontests
 

@@ -22,7 +22,8 @@ jobs:
           node-version: 16
 
       - name: Change to the regressiontests directory
-        run: cd regressiontests
+        run: ls
+        cd regressiontests
 
       - name: Install Dependencies
         run: npm install

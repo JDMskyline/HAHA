@@ -28,7 +28,7 @@ jobs:
       run: cd HAH
 
     - name: move to the test folder
-      run: cd regressiontests
+      run: pwd
 
     - name: Run Tests
       run:  npx mocha --no-timeouts 'airport.js'  # Modify this to match your test script command

@@ -36,6 +36,9 @@ jobs:
       - name: why
         run: cd regressiontests
 
+      - name: where am I
+        run: pwd        
+
       - name: check reg folder
         run: ls
 

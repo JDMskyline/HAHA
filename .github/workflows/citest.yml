@@ -26,7 +26,6 @@ jobs:
 
     - name: move to this folder
       run: cd regressiontests
-      ls
-      
+
     - name: Run Tests
       run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

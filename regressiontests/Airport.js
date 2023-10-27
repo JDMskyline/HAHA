@@ -1,4 +1,4 @@
-const config = require("./helpers/config");
+const config = require("../helpers/config");
 const path = require('path');
 const { assert } = require("assert").strict;
 const { fstat } = require("fs");

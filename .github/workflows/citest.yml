@@ -1,6 +1,12 @@
-name: Selenium Test
+name: CI (Continuous Integration)
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   build:
@@ -10,39 +16,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: check  dir firsttime
-        run: ls
-
-      - name: move up 
-        run: cd ..
-
-      - name: move up one more time
-        run: cd ..
-
-      - name: check  dir 
-        run: ls
-
-      - name: Change to the HAH directory
-        run: cd ../HAH
-        
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16         
-
-      - name: checking file again
-        run: ls
+          node-version: 16
 
       - name: Change to the regressiontests directory
         run: cd regressiontests
-
-      - name: checking file
-        run: ls
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 16  # Replace with your Node.js version        
 
       - name: Install Dependencies
         run: npm install

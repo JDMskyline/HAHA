@@ -18,6 +18,9 @@ jobs:
       - name: Change to the regressiontests directory
         run: cd HAH/regressiontests
 
+      - name: checking file
+        run: ls
+
       - name: Install Dependencies
         run: npm install
 

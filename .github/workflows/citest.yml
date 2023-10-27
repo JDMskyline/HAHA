@@ -1,6 +1,6 @@
 name: Selenium Test
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
@@ -29,9 +29,6 @@ jobs:
 
     - name: check where am I
       run: cd ../regressiontests
-
-    - name: move to the test folder
-      run: pwd
 
     - name: Run Tests
       run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

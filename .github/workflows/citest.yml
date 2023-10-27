@@ -1,6 +1,6 @@
 name: Selenium Test
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -24,10 +24,7 @@ jobs:
     - name: Install Mochawesome
       run: npm install mochawesome
 
-     - name: check where am I
-      run: pwd
-
-    - name: check where am I
+    - name: move to this folder
       run: cd ../regressiontests
 
     - name: Run Tests

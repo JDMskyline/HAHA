@@ -894,7 +894,7 @@ describe("TRB | Nunc Pro Tunc Test Started", function () {
       .findElement(By.xpath("//input[@name='penalty']"))
       .sendKeys(penaltyamt);
 
-    console.log(principalamt + interestamt + penaltyamt);
+    
 
     /*driver.sleep(10000);
     const element = driver.findElement(By.xpath("//div/p[@class='mt-4 is-size-2']"));

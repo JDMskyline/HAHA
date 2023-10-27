@@ -22,10 +22,7 @@ jobs:
           node-version: 16
 
       - name: listing directories
-        run: ls
-
-      - name: where am I
-        run: pwd              
+        run: ls            
     
       - name: Install Dependencies
         run: npm install

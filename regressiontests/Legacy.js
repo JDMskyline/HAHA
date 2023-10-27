@@ -937,7 +937,7 @@ describe("TRB | Legacy Tax Category - Test Started", function () {
       .findElement(By.xpath("//input[@name='penalty']"))
       .sendKeys(penaltyamt);
 
-    console.log(principalamt + interestamt + penaltyamt);
+    //console.log(principalamt + interestamt + penaltyamt);
 
     //----------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------

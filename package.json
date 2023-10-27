@@ -2,5 +2,8 @@
   "dependencies": {
     "mochawesome": "^7.1.3",
     "selenium-webdriver": "^4.14.0"
+  },
+  "scripts": {
+    "test": "mocha regressiontests/parkingTax.js"
   }
 }

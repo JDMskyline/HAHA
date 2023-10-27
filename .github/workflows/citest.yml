@@ -16,7 +16,7 @@ jobs:
         node-version: 16  # You can specify the Node.js version you need
 
     - name: move to this folder
-      run: cd HAH
+      run: cd regressiontests
 
     - name: Install Dependencies
       run: npm install
@@ -26,9 +26,6 @@ jobs:
 
     - name: Install Mochawesome
       run: npm install mochawesome
-
-    - name: move to this folder
-      run: cd regressiontests
 
     - name: Run Tests
       run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

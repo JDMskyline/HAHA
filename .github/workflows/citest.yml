@@ -7,28 +7,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v1
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: navigate to this folder
-      run: cd HAH
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16  # Replace with your Node.js version
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 16  # You can specify the Node.js version you need
+      - name: Change to the regressiontests directory
+        run: cd HAH/regressiontests
 
-    - name: Install Dependencies
-      run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Install Selenium WebDriver
-      run: npm install selenium-webdriver
+      - name: Install Selenium WebDriver
+        run: npm install selenium-webdriver
 
-    - name: Install Mochawesome
-      run: npm install mochawesome
+      - name: Install Mochawesome
+        run: npm install mochawesome
 
-    - name: move to this folder
-      run: cd regressiontests
-
-    - name: Run Tests
+      - name: Run Tests
       run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

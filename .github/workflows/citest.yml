@@ -7,9 +7,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
@@ -28,4 +25,5 @@ jobs:
         run: npm install mochawesome
 
       - name: Run Tests
+        run: npx mocha --no-timeouts 'your-test-script.js'
       run:  npx mocha --no-timeouts 'parkingTax.js'  # Modify this to match your test script command

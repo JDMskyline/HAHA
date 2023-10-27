@@ -16,10 +16,10 @@ jobs:
         node-version: 16  # You can specify the Node.js version you need
 
     - name: go to this folder
-      run: cd HAH
-      run: npm install
-      run: npm install selenium-webdriver
-      run: npm install mochawesome
+      run:  cd HAH
+       npm install
+       npm install selenium-webdriver
+       npm install mochawesome 
 
     - name: move to this folder
       run: cd regressiontests

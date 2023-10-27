@@ -23,6 +23,9 @@ jobs:
 
       - name: listing directories
         run: ls
+
+      - name: where am I
+        run: pwd              
     
       - name: Install Dependencies
         run: npm install
@@ -31,10 +34,7 @@ jobs:
         run: npm install selenium-webdriver
 
       - name: Install Mochawesome
-        run: npm install mochawesome
-
-      - name: where am I
-        run: pwd        
+        run: npm install mochawesome  
 
       - name: check reg folder
         run: cd regressiontests

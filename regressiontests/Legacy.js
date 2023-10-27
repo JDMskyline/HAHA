@@ -1063,8 +1063,8 @@ describe("TRB | Legacy Tax Category - Test Started", function () {
         )
       )
       .sendKeys(docketNumber, Key.ENTER);
-    await driver.manage().setTimeouts({ implicit: 10000 });
     await driver.sleep(5000);
+    await driver.manage().setTimeouts({ implicit: 10000 });
     await driver
       .findElement(By.xpath("//a[normalize-space()='Schedule']"))
       .click();

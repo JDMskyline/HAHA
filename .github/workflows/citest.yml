@@ -23,10 +23,7 @@ jobs:
 
       - name: Change to the regressiontests directory
         run: ls
-
-      - name: Change to the regressiontests directo
-        run: cd HAH      
-
+    
       - name: Install Dependencies
         run: npm install
 
@@ -38,6 +35,6 @@ jobs:
 
       - name: why
         run: ls
-        
+
       - name: Run Tests
         run:  npx mocha --no-timeouts regressiontests/parkingTax.js  # Modify this to match your test script command

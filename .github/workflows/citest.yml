@@ -24,5 +24,11 @@ jobs:
     - name: Install Mochawesome
       run: npm install mochawesome
 
+    - name: move into the folder
+      run: cd HAH
+
+    - name: move into the test folder
+      run: cd regressiontests
+
     - name: Run Tests
       run:  npx mocha --no-timeouts 'airport.js'  # Modify this to match your test script command

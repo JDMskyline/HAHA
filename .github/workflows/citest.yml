@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 16
 
-      - name: why
-        run: cd HAHA
+      - name: listing directories
+        run: ls
     
       - name: Install Dependencies
         run: npm install
@@ -37,7 +37,7 @@ jobs:
         run: pwd        
 
       - name: check reg folder
-        run: ls
+        run: cd regressiontests
 
       - name: Run Tests
         run:  npx mocha --no-timeouts ParkingTax.js  # Modify this to match your test script command

@@ -36,5 +36,8 @@ jobs:
       - name: Install Mochawesome
         run: npm install mochawesome
 
+      - name: why
+        run: ls
+        
       - name: Run Tests
         run:  npx mocha --no-timeouts regressiontests/parkingTax.js  # Modify this to match your test script command

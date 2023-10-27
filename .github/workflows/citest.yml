@@ -10,6 +10,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
 
+    - name: navigate to this folder
+      run: cd HAH
+
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:

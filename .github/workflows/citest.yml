@@ -23,7 +23,9 @@ jobs:
 
       - name: Change to the regressiontests directory
         run: ls
-        cd regressiontests
+
+      - name: Change to the regressiontests directo
+        run: ls      
 
       - name: Install Dependencies
         run: npm install

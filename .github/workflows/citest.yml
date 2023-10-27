@@ -16,7 +16,7 @@ jobs:
         node-version: 16  # You can specify the Node.js version you need
 
     - name: move to this folder
-      run: cd regressiontests
+      run: ls
 
     - name: Install Dependencies
       run: npm install

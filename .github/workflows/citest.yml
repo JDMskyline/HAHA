@@ -4,11 +4,17 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: check where am I
+      run: pwd
+
+      - name: check where am I
+      run: cd ../HAH
 
     - name: Setup Node.js
       uses: actions/setup-node@v2
@@ -24,8 +30,8 @@ jobs:
     - name: Install Mochawesome
       run: npm install mochawesome
 
-    - name: move to this folder
-      run: cd HAH
+    - name: check where am I
+      run: cd ../regressiontests
 
     - name: move to the test folder
       run: pwd

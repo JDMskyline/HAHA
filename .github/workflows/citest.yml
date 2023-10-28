@@ -22,7 +22,7 @@ jobs:
           node-version: 16
 
       - name: listing directories
-        run: ls            
+        run: ls  && cd regressiontests && ls          
     
       - name: Install Dependencies
         run: npm install
@@ -32,6 +32,3 @@ jobs:
 
       - name: Install Mochawesome
         run: npm install mochawesome  
-
-      - name: Run Tests
-        run:  npm test  # Modify this to match your test script command

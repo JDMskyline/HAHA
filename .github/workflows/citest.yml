@@ -34,4 +34,4 @@ jobs:
         run: npm install mochawesome  
 
       - name: Run Tests
-        run:  npm citest  # Modify this to match your test script command
+        run:  npm run citest  # Modify this to match your test script command

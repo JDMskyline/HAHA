@@ -33,7 +33,7 @@ jobs:
       - name: Install Mochawesome
         run: npm install mochawesome  
 
-      -name: Install chromedriver
+      - name: Install chromedriver
         run: npm install chromedriver  
 
       - name: Run Tests

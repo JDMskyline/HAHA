@@ -95,7 +95,7 @@ describe("TRB | Legacy Tax Category - Test Started", function () {
 
     //Headless code block
 
-    const options = new chrome.Options();
+    const options = new browserSelect.Options();
     options.addArguments('--headless');
     
     const driver = new Builder()

@@ -1002,6 +1002,7 @@ describe("TRB | Refuse Tax Category - Test Started", function () {
     }
 
     //Clicking on submit should create a new petition:
+    await driver.quit();
 
     await driver
       .findElement(By.xpath("//button[normalize-space()='SUBMIT']"))

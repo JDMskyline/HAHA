@@ -75,7 +75,7 @@ initialBillDate = `${month.toString().padStart(2, "0")}/${day
 //--------------------------------------------------------------
 
 //MicrosoftEdge | chrome | firefox
-let browserSelect = "firefox";
+let browserSelect = "chrome";
 
 //----------------------------------------------------------------------------------------------------
 //-------------------------------------TRB AUTOMATION CODE--------------------------------------------
@@ -86,6 +86,8 @@ describe("TRB | Legacy Tax Category - Test Started", function () {
   //it block
 
   it("Legacy - Test Automation", async function () {
+
+    
     //non-headless----------------------------------------------------
 
     /*let driver = await new Builder().forBrowser(browserSelect).build();

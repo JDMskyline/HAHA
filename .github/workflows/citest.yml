@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout code
@@ -34,4 +34,4 @@ jobs:
         run: npm install mochawesome  
 
       - name: Run Tests
-        run:  npm run citest  # Modify this to match your test script command
+        run:  npm test  # Modify this to match your test script command

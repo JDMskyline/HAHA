@@ -95,18 +95,22 @@ describe("TRB | Legacy Tax Category - Test Started", function () {
 
     //Headless code block
 
-    const { Builder } = require("selenium-webdriver");
-    const chrome = require("selenium-webdriver/chrome");
-
+    const { Builder } = require('selenium-webdriver');
+    const chrome = require('selenium-webdriver/chrome');
+    
     const options = new chrome.Options();
-    options.addArguments("--headless");
-
-    const browserSelect = "chrome"; // browser
-
-    let driver = await new Builder()
+    options.addArguments('--headless');
+    options.addArguments('--disable-gpu');
+    options.addArguments('--no-sandbox');
+    options.addArguments('--disable-dev-shm-usage');
+    options.windowSize({ width: 1920, height: 1080 }); // Corrected method name
+    
+    const browserSelect = 'chrome';
+    
+    const driver = new Builder()
       .forBrowser(browserSelect)
       .setChromeOptions(options)
-      .setChromeService(new chrome.ServiceBuilder(browserSelect.path))
+      .setChromeService(new chrome.ServiceBuilder().build()) // Corrected service builder
       .build();
 
     //Headless code block

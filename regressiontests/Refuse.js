@@ -3,6 +3,7 @@ const path = require('path');
 const { assert } = require("assert").strict;
 const { fstat } = require("fs");
 const { Builder, By, Key, until, WebElement } = require("selenium-webdriver");
+const { error } = require("console");
 //---------------------Login Process-------------------------------
 const URL = config.TEST_URL;
 const userName = config.AD_USER_NAME;
@@ -1002,7 +1003,11 @@ describe("TRB | Refuse Tax Category - Test Started", function () {
     }
 
     //Clicking on submit should create a new petition:
-    await driver.close();
+    try{
+      await driver.quit();
+    } catch (console){
+      console.error('an error occured: ', error);
+    }
 
     await driver
       .findElement(By.xpath("//button[normalize-space()='SUBMIT']"))
